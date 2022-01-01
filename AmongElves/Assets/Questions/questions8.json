@@ -1,0 +1,85 @@
+{
+  "questions": [
+    {
+      "type": "mc",
+      "Question": "Which value can a Boolean variable not take?",
+      "Options": [ "1", "maybe", "true", "false" ],
+      "CorrectOption": 1
+    },
+    {
+      "type": "mc",
+      "Question": "What is does the following evaluate to: 4 * 5 == 21",
+      "Options": [ "True", "False", "2", "Maybe" ],
+      "CorrectOption": 1
+    },
+    {
+      "type": "mc",
+      "Question": "What does the following evaluate to: 21 // 2 == 3 - 2",
+      "Options": [ "True", "False", "2", "Maybe" ],
+      "CorrectOption": 0
+    },
+    {
+      "type": "mc",
+      "Question": "What does the following evaluate to: ((5 > 2) and (3 < 3)) or (4 / 2 == 2)",
+      "Options": [ "True", "False", "2", "Maybe" ],
+      "CorrectOption": 0
+    },
+    {
+      "type": "mc",
+      "Question": "Which sorting algorithm works by first finding the smallest element of the unsorted list?",
+      "Options": [ "Insertion sort", "Selection sort", "Quicksort", "Bogo sort" ],
+      "CorrectOption": 1
+    },
+    {
+      "type": "mc",
+      "Question": "Which sorting algorithm works by picking the first unsorted item and finding its place in the sorted list?",
+      "Options": [ "Insertion sort", "Selection sort", "Quicksort", "Bogo sort" ],
+      "CorrectOption": 0
+    },
+    {
+      "type": "bf",
+      "Question": "How many inputs does an AND gate have? (enter answer as number)",
+      "Answer": "2"
+    },
+    {
+      "type": "bf",
+      "Question": "How many inputs does a NOT gate have? (enter answer as number)",
+      "Answer": "1"
+    },
+    {
+      "type": "bf",
+      "Question": "How many rows do you need to draw out the truth table of a circuit with 3 inputs?",
+      "Answer": "8"
+    },
+    {
+      "type": "bf",
+      "Question": "You aregiven a Python list: words = ['Hello', 'Wowzers', 'computer science']. What will print(words[1]) proint out?",
+      "Answer": "wowzers"
+    },
+    {
+      "type": "bf",
+      "Question": "What is the name of the Python method that puts an item to the end of a list? a._____('word')",
+      "Answer": "append"
+    },
+    {
+      "type": "bf",
+      "Question": "What is the name of the Python method that removes an item from a list? a._____('word')",
+      "Answer": "remove"
+    },
+    {
+      "type": "bf",
+      "Question": "What is the name of the Python method that removes an item from a given index? a._____(1)",
+      "Answer": "pop"
+    },
+    {
+      "type": "bf",
+      "Question": "What is the name of the Python method that find the location of an item in a list? a._____('word')",
+      "Answer": "index"
+    },
+    {
+      "type": "bf",
+      "Question": "Which Python method puts a list in order? a._____()",
+      "Answer": "sort"
+    }
+  ]
+}

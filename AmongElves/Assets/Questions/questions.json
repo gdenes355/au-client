@@ -1,0 +1,79 @@
+{
+  "questions": [
+    {
+      "type": "mc",
+      "Question": "What is a REPEAT.... UNTIL construct?",
+      "Options": [ "pre-test loop", "post-test loop", "selection", "repetition" ],
+      "CorrectOption": 1
+    },
+    {
+      "type": "mc",
+      "Question": "What is a WHILE..... DO .... ENDWHILE construct?",
+      "Options": [ "pre-test loop", "post-test loop", "selection", "repetition" ],
+      "CorrectOption": 0
+    },
+    {
+      "type": "mc",
+      "Question": "Which of these is not a loop?",
+      "Options": [ "count-controlled repetition", "post-test repetition", "expert system", "infinite repetition" ],
+      "CorrectOption": 2
+    },
+    {
+      "type": "mc",
+      "Question": "Which of these is not a valid way to describe an algorithm?",
+      "Options": [ "flowcharts", "persecode", "pseudocode", "plain English" ],
+      "CorrectOption": 1
+    },
+    {
+      "type": "mc",
+      "Question": "What does SSD stand for?",
+      "Options": [ "Solid Disk Drive", "Solid State Drive", "Solid System Drive", "Service System Drive" ],
+      "CorrectOption": 1
+    },
+    {
+      "type": "bf",
+      "Question": "What is 10010101 in denary?",
+      "Answer": "149"
+    },
+    {
+      "type": "bf",
+      "Question": "What is 11011001 in denary?",
+      "Answer": "217"
+    },
+    {
+      "type": "bf",
+      "Question": "What is 2512 in binary?",
+      "Answer": "100111010000"
+    },
+    {
+      "type": "bf",
+      "Question": "What is 0xFA in binary?",
+      "Answer": "11111010"
+    },
+    {
+      "type": "bf",
+      "Question": "What is 0x8A + 0x7A in denary?",
+      "Answer": "260"
+    },
+    {
+      "type": "bf",
+      "Question": "The CPU stands for _____ _____ ____",
+      "Answer": "central processing unit"
+    },
+    {
+      "type": "bf",
+      "Question": "The RAM is the ______ _____ _____",
+      "Answer": "random access memory"
+    },
+    {
+      "type": "bf",
+      "Question": "What is the less than or equal to operator in Python?",
+      "Answer": "<="
+    },
+    {
+      "type": "bf",
+      "Question": "What is the greater than or equal to operator in Python?",
+      "Answer": ">="
+    }
+  ]
+}
