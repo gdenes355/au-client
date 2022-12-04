@@ -31,7 +31,7 @@ public class AU_PauseScene : MonoBehaviour, VoteUpdateListener
         List<AU_PlayerController> allPlayers = new List<AU_PlayerController>();
         allPlayers.Add(GameController.Instance.LocalPlayer);
         allPlayers.AddRange(GameController.Instance.OtherPlayers.Values);
-        for (int i = 0; i < allPlayers.Count; i++)
+        for (int i = 0; i < Math.Min(allPlayers.Count, pausePlayers.Count); i++)
         {
             pausePlayers[i].playerName = allPlayers[i].m_name;
             pausePlayers[i].isImpostor = showImpostors && allPlayers[i].m_isImpostor;

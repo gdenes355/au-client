@@ -286,10 +286,6 @@ MonoBehaviour:
       m_Groups: 
       m_Action: WASD
       m_Flags: 8
-  m_movementInput: {x: 0, y: 0}
-  m_movementSpeed: 5
-  m_color: {r: 0, g: 0.051671505, b: 1, a: 1}
-  m_isImpostor: 0
   KILL:
     m_Name: KILL
     m_Type: 0
@@ -306,12 +302,6 @@ MonoBehaviour:
       m_Groups: 
       m_Action: KILL
       m_Flags: 0
-  m_collider: {fileID: 6068415019730530205}
-  name1Text: {fileID: 6903385284665653025}
-  name2Text: {fileID: 2813670699745945545}
-  m_isDead: 0
-  m_bodyPrefab: {fileID: 2930952092865630066, guid: 5eb3bab7c29380e48bbcc719efd5a379,
-    type: 3}
   REPORT:
     m_Name: REPORT
     m_Type: 0
@@ -328,6 +318,44 @@ MonoBehaviour:
       m_Groups: 
       m_Action: REPORT
       m_Flags: 0
+  USE:
+    m_Name: USE
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3dd436ad-e40f-467f-8598-1532e20c8f34
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+  VENT:
+    m_Name: VENT
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0ddbab1d-d01c-493f-a648-1ff43dd37a13
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+  m_movementInput: {x: 0, y: 0}
+  m_movementSpeed: 5
+  m_color: {r: 0, g: 0.051671505, b: 1, a: 1}
+  m_isImpostor: 0
+  m_hasCalledVote: 0
+  m_collider: {fileID: 6068415019730530205}
+  m_name: 
+  name1Text: {fileID: 6903385284665653025}
+  name2Text: {fileID: 2813670699745945545}
+  seq: 0
+  xs: []
+  ys: []
+  finalvx: 0
+  finalvy: 0
+  currvx: 0
+  currvy: 0
+  m_isDead: 0
+  m_bodyPrefab: {fileID: 2930952092865630066, guid: 5eb3bab7c29380e48bbcc719efd5a379,
+    type: 3}
+  activeTask: {fileID: 0}
+  activeVent: {fileID: 0}
+  killCooldown: 0
 --- !u!95 &7049652050488210281
 Animator:
   serializedVersion: 3

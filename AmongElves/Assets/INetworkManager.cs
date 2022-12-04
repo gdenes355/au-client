@@ -52,6 +52,9 @@ public abstract class INetworkManager : MonoBehaviour
 
     public void HandleStateUpdate(GameState gameState)
     {
+        // keep track of players to remove
+        var inactivePlayerIds = new List<int>(GameController.Instance.OtherPlayers.Keys);
+
         foreach (GameState.Player aaPlayer in gameState.data.players)
         {
             AU_PlayerController playerToUpdate = null;
@@ -71,6 +74,7 @@ public abstract class INetworkManager : MonoBehaviour
                 }
                 else
                 {
+                    inactivePlayerIds.Remove(aaPlayer.id);
                     playerToUpdate = GameController.Instance.OtherPlayers[aaPlayer.id];
                 }
 
@@ -107,6 +111,17 @@ public abstract class INetworkManager : MonoBehaviour
             }
             playerToUpdate.m_isImpostor = aaPlayer.isImpostor();
             playerToUpdate.m_hasCalledVote = aaPlayer.hasCalledVote();
+        }
+
+        if (inactivePlayerIds.Count > 0)
+        {
+            // remove players who are no longer tracked by the server
+            foreach (var id in inactivePlayerIds)
+            {
+                AU_PlayerController player = GameController.Instance.OtherPlayers[id];
+                GameController.Instance.OtherPlayers.Remove(id);
+                Destroy(player.gameObject);
+            }
         }
 
         GameController.Instance.transitionToState(gameState.data.state);

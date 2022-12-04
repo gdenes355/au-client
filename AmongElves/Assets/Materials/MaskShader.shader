@@ -1,10 +1,9 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-Shader "Unlit/MaskShader"
+﻿Shader "Unlit/MaskShader"
 {
 	Properties
 	{
 		_MainTex("Texture", 2D) = "white" {}
+		_ScreenRatio("ScreenRatio", Vector) = (1,1,0,0)
 	}
 		SubShader
 	{
@@ -18,8 +17,6 @@ Shader "Unlit/MaskShader"
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			// make fog work
-			#pragma multi_compile_fog
 
 			#include "UnityCG.cginc"
 
@@ -32,12 +29,11 @@ Shader "Unlit/MaskShader"
 			struct v2f
 			{
 				float3 screenPos : TEXCOORD0;
-				UNITY_FOG_COORDS(1)
 				float4 vertex : SV_POSITION;
 			};
 
 			sampler2D _MainTex;
-			float4 _MainTex_ST;
+			float4 _ScreenRatio;
 
 			v2f vert(appdata v)
 			{
@@ -47,20 +43,16 @@ Shader "Unlit/MaskShader"
 
 				// This might be platform-specific. Test with OpenGL.
 				o.screenPos.y *= -1.0f;
-
-				UNITY_TRANSFER_FOG(o,o.vertex);
 				return o;
 			}
 
 			fixed4 frag(v2f i) : SV_Target
 			{
 				// sample the texture
-				float2 uv = (i.screenPos.xy / i.screenPos.z) * 0.5f + 0.5f;
+				float2 uv = (i.screenPos.xy / i.screenPos.z) * 0.5f *_ScreenRatio.xy + 0.5f;
 
 				fixed4 col = tex2D(_MainTex, float2(uv.x, 1.0-uv.y));
 
-				// apply fog
-				UNITY_APPLY_FOG(i.fogCoord, col);
 				return col;
 			}
 			ENDCG
